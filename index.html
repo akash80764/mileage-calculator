@@ -1,0 +1,180 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mileage Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🚗 Mileage Calculator</h1>
+            <p>Calculate your vehicle mileage and fuel cost</p>
+            <button id="darkModeBtn" class="dark-mode-btn">
+    🌙 Dark Mode
+</button>
+        </header>
+
+        <main class="calculator">
+           <div class="input-group">
+    <label for="vehicleType">🏍️ Vehicle Type</label>
+
+    <select id="vehicleType">
+        <option value="">Select vehicle type</option>
+        <option value="bike">🏍️ Bike</option>
+        <option value="car">🚗 Car</option>
+    </select>
+</div>
+
+<div class="input-group">
+    <label for="brand">🏷️ Brand</label>
+
+    <select id="brand" disabled>
+        <option value="">Select brand</option>
+    </select>
+</div>
+
+<div class="input-group">
+    <label for="model">🏍️ Model</label>
+
+    <select id="model" disabled>
+        <option value="">Select model</option>
+    </select>
+</div>
+
+            <div class="input-group">
+                <label for="distance">Distance Travelled</label>
+                <input type="number" id="distance" placeholder="Enter distance" min="0">
+                <span>km</span>
+            </div>
+
+            <div class="input-group">
+                <label for="fuel">Fuel Used</label>
+                <input type="number" id="fuel" placeholder="Enter fuel used" min="0">
+                <span>litres</span>
+            </div>
+
+            <div class="input-group">
+                <label for="price">Fuel Price</label>
+                <input type="number" id="price" placeholder="Enter fuel price" min="0">
+                <span>₹ / litre</span>
+            </div>
+
+            <button id="calculateBtn">Calculate Mileage</button>
+            <button id="resetBtn" class="reset-btn">Reset</button>
+
+            <div class="results">
+
+                <div class="result-card">
+                    <h3>Mileage</h3>
+                    <p id="mileageResult">-- km/L</p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Fuel Cost</h3>
+                    <p id="costResult">₹ --</p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Cost / KM</h3>
+                    <p id="costPerKmResult">₹ --</p>
+                </div>
+
+            </div>
+
+        </main>
+        <section class="how-it-works">
+
+    <h2>How It Works</h2>
+
+    <p class="section-subtitle">
+        Calculate your vehicle mileage in 3 simple steps.
+    </p>
+
+    <div class="steps">
+
+        <div class="step-card">
+            <div class="step-icon">📏</div>
+            <h3>1. Enter Distance</h3>
+            <p>
+                Enter the total distance you travelled in kilometres.
+            </p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-icon">⛽</div>
+            <h3>2. Enter Fuel Used</h3>
+            <p>
+                Enter how many litres of fuel your vehicle used.
+            </p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-icon">📊</div>
+            <h3>3. Get Results</h3>
+            <p>
+                Click calculate to see mileage, fuel cost and cost per kilometre.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-container">
+
+        <div class="faq-item">
+            <h3>What is vehicle mileage?</h3>
+            <p>
+                Vehicle mileage tells you how far your vehicle can travel
+                using one litre of fuel. It is usually measured in km/L.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How is mileage calculated?</h3>
+            <p>
+                Mileage is calculated by dividing the distance travelled
+                by the amount of fuel used.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What is cost per kilometre?</h3>
+            <p>
+                Cost per kilometre tells you approximately how much fuel
+                costs for every kilometre you travel.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I use this calculator for cars and bikes?</h3>
+            <p>
+                Yes. You can use the calculator for cars, motorcycles,
+                scooters and other fuel-powered vehicles.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+        <footer>
+            <p>© 2026 Mileage Calculator</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
